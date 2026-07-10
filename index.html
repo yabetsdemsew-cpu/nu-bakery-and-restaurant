@@ -13,6 +13,15 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // REPLACE THIS WITH YOUR ACTUAL PUBLIC KEY FROM EMAILJS
+            emailjs.init("PEIbZ9Zowtz5KZ878");
+        })();
+    </script>
+
     <style>
         /* --- CSS Variables --- */
         :root {
@@ -50,12 +59,10 @@
         }
 
         /* --- Header & Navigation --- */
-                /* --- Header & Navigation --- */
-                /* --- Header & Navigation --- */
         header {
             background-color: var(--primary-dark);
             color: var(--gold);
-            padding: 0.8rem 2%; /* Reduced padding to give more room */
+            padding: 0.8rem 2%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -67,7 +74,6 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        /* Logo Container - FORCED TRANSPARENT */
         .logo-container {
             display: flex;
             align-items: center;
@@ -88,18 +94,18 @@
         }
 
         .logo-image {
-            height: 45px; /* Slightly smaller for better fit */
+            height: 45px;
             width: auto;
-            background: transparent !important; /* Removes white box */
+            background: transparent !important;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.5rem; /* Reduced gap so button fits */
+            gap: 1.5rem;
             align-items: center;
-            margin-left: auto; /* Pushes navigation to the right */
+            margin-left: auto;
             margin-right: 1rem;
         }
 
@@ -107,7 +113,7 @@
             color: var(--text-light);
             font-weight: 600;
             transition: var(--transition);
-            font-size: 0.95rem; /* Slightly smaller text to fit */
+            font-size: 0.95rem;
         }
 
         .nav-links a:hover {
@@ -129,7 +135,7 @@
         .btn {
             background-color: var(--gold);
             color: var(--primary-dark);
-            padding: 0.7rem 1.2rem; /* Slightly smaller button */
+            padding: 0.7rem 1.2rem;
             border: none;
             border-radius: 4px;
             font-weight: 700;
@@ -145,7 +151,6 @@
             transform: translateY(-2px);
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             color: var(--gold);
@@ -153,7 +158,6 @@
             cursor: pointer;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -180,53 +184,6 @@
             .logo-image {
                 height: 40px;
             }
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            color: var(--gold);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-dark);
-                padding: 1rem 0;
-                text-align: center;
-                margin: 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                margin: 0.5rem 0;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .logo-image {
-                height: 40px;
-            }
-        }
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            color: var(--gold);
-            font-size: 1.5rem;
-            cursor: pointer;
         }
 
         /* --- Hero Section --- */
@@ -264,7 +221,6 @@
             animation-fill-mode: both;
         }
 
-        /* --- Sections General --- */
         section {
             padding: 5rem 5%;
         }
@@ -285,8 +241,7 @@
             margin: 10px auto 0;
         }
 
-        /* --- Featured Menu Enhanced --- */
-                /* --- Catering Cards Special Styling --- */
+        /* --- Menu Styles --- */
         .catering-card {
             background: #fff;
             border-radius: 12px;
@@ -326,7 +281,6 @@
             font-weight: 700;
         }
 
-        /* Special Badges for Catering */
         .menu-badge.fresh {
             background: #27ae60;
             color: white;
@@ -337,7 +291,6 @@
             color: white;
         }
 
-        /* Feature Tags */
         .menu-features {
             display: flex;
             flex-wrap: wrap;
@@ -365,7 +318,6 @@
             font-size: 0.75rem;
         }
 
-        /* Responsive for Catering Cards */
         @media (max-width: 768px) {
             .menu-features {
                 flex-direction: column;
@@ -376,6 +328,7 @@
                 height: 220px;
             }
         }
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -462,7 +415,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Category Section Styling */
         #menu > div > h3 {
             position: relative;
             display: inline-block;
@@ -559,7 +511,7 @@
         .success-msg { background: rgba(46, 204, 113, 0.2); color: #2ecc71; border: 1px solid #2ecc71; }
         .error-msg { background: rgba(231, 76, 60, 0.2); color: #e74c3c; border: 1px solid #e74c3c; }
 
-        /* --- Gallery Section Professional --- */
+        /* --- Gallery --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -751,7 +703,7 @@
             transform: scale(1);
         }
 
-        /* --- Contact Section --- */
+        /* --- Contact --- */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -776,7 +728,6 @@
             border-radius: 8px;
         }
 
-        /* --- Footer --- */
         footer {
             background-color: #051a12;
             color: var(--text-light);
@@ -789,7 +740,6 @@
             margin: 0 10px;
         }
 
-        /* --- Floating WhatsApp --- */
         .floating-whatsapp {
             position: fixed;
             bottom: 20px;
@@ -812,7 +762,6 @@
             transform: scale(1.1);
         }
 
-        /* --- Animations --- */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -822,7 +771,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -856,25 +804,14 @@
 <body>
 
     <!-- Header Navigation -->
-      <!-- Header Navigation -->
     <header>
         <div class="logo-container">
             <a href="#home" class="logo-link">
-                <!-- NU Bakery Logo SVG -->
                 <svg class="logo-image" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Main NU Text -->
                     <text x="10" y="45" font-family="Playfair Display, serif" font-size="42" font-weight="700" fill="#D4AF37" letter-spacing="2">NU</text>
-                    
-                    <!-- Decorative Line -->
                     <line x1="85" y1="20" x2="85" y2="45" stroke="#D4AF37" stroke-width="2"/>
-                    
-                    <!-- BAKERY text -->
                     <text x="95" y="22" font-family="Lato, sans-serif" font-size="9" font-weight="600" fill="#F8F9FA" letter-spacing="3">BAKERY</text>
-                    
-                    <!-- AND text -->
                     <text x="95" y="33" font-family="Lato, sans-serif" font-size="7" font-weight="400" fill="#D4AF37" letter-spacing="2">AND</text>
-                    
-                    <!-- RESTAURANT text -->
                     <text x="95" y="44" font-family="Lato, sans-serif" font-size="9" font-weight="600" fill="#F8F9FA" letter-spacing="3">RESTAURANT</text>
                 </svg>
             </a>
@@ -889,13 +826,11 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-                    
                 <div class="social-icons">
                     <a href="https://instagram.com/nu._bakery" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/251982757777" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://t.me/NUBakery" target="_blank"><i class="fab fa-telegram"></i></a>
                 </div>
-        
             </li>
             <li><a href="#book" class="btn">Book a Table</a></li>
         </ul>
@@ -922,13 +857,13 @@
     <!-- Featured Menu Section -->
     <section id="menu">
         <h2 class="section-title">Featured Menu</h2>
-                <!-- Catering & Buffet Specials -->
+        
+        <!-- Catering & Buffet Specials -->
         <div style="margin-bottom: 3rem;">
             <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
                 <i class="fas fa-concierge-bell" style="margin-right: 10px;"></i>Catering & Buffet Specials
             </h3>
             <div class="menu-grid">
-                <!-- Item 1: Event Catering Spread -->
                 <div class="menu-card catering-card">
                     <div class="menu-image-wrapper">
                         <img src="11.jpg" alt="Event Catering Spread">
@@ -945,7 +880,6 @@
                     </div>
                 </div>
                 
-                <!-- Item 2: Fresh Garden Salad Bar -->
                 <div class="menu-card catering-card">
                     <div class="menu-image-wrapper">
                         <img src="22.jpg" alt="Fresh Garden Salad Bar">
@@ -962,7 +896,6 @@
                     </div>
                 </div>
                 
-                <!-- Item 3: Breakfast Buffet -->
                 <div class="menu-card catering-card">
                     <div class="menu-image-wrapper">
                         <img src="33.jpg" alt="Breakfast Buffet">
@@ -980,6 +913,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Savory & Main Dishes -->
         <div style="margin-bottom: 3rem;">
             <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
@@ -996,7 +930,6 @@
                         <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">A classic burger served with crispy French fries in a mini wire basket and ketchup</p>
                     </div>
                 </div>
-               
                 
                 <div class="menu-card">
                     <div class="menu-image-wrapper">
@@ -1008,8 +941,7 @@
                         <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Folded omelette with ketchup and herbs, sweet pastry, French toast with syrup</p>
                     </div>
                 </div>
-                
-            
+            </div>
         </div>
         
         <!-- Desserts & Pastries -->
@@ -1070,8 +1002,6 @@
                 </div>
             </div>
         </div>
-        
-    
     </section>
 
     <!-- Gallery Preview -->
@@ -1150,7 +1080,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="https://instagram.com/nu_bakery" target="_blank" class="btn" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+            <a href="https://instagram.com/nu._bakery" target="_blank" class="btn" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
                 <i class="fab fa-instagram" style="margin-right: 8px;"></i>See More on Instagram
             </a>
         </div>
@@ -1159,12 +1089,8 @@
     <!-- Reservation Section -->
     <section id="book">
         <h2 class="section-title">Book a Table</h2>
-            <div class="booking-container">
-            <form id="reservation-form" action="https://formsubmit.co/yabetsdemsew@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New Table Reservation - NU Bakery!">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-                
+        <div class="booking-container">
+            <form id="reservation-form">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
@@ -1202,7 +1128,9 @@
                         <textarea id="request" name="request" rows="3" placeholder="Anniversary, birthday, window seat..."></textarea>
                     </div>
                     <div class="form-group full-width">
-                        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">Book Now</button>
+                        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">
+                            <i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Book Now
+                        </button>
                     </div>
                 </div>
             </form>
@@ -1257,7 +1185,7 @@
     <!-- Footer -->
     <footer>
         <div class="logo brand-font" style="margin-bottom: 1rem;">NU Bakery & Restaurant</div>
-                <div class="social-icons" style="margin-bottom: 1rem;">
+        <div class="social-icons" style="margin-bottom: 1rem;">
             <a href="https://www.instagram.com/nu._bakery?igsh=MXVsMGRzamVlZHg0bQ=" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/251982757777" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="https://t.me/NUBakery" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -1272,6 +1200,7 @@
 
     <!-- JavaScript -->
     <script>
+        // Mobile Menu Toggle
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
 
@@ -1279,47 +1208,45 @@
             navLinks.classList.toggle('active');
         });
 
+        // EmailJS Form Submission
         const form = document.getElementById('reservation-form');
         const msgContainer = document.getElementById('form-message');
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
             
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerText;
-            submitBtn.innerText = 'Sending...';
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            fetch("https://formsubmit.co/ajax/yabetsdemsew@gmail.com", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if(data.success) {
-                    msgContainer.innerText = "Thank you! Your reservation request has been sent. We will contact you shortly.";
+            // REPLACE THESE WITH YOUR ACTUAL EMAILJS IDs
+            const serviceID = 'service_jxw691w';
+            const templateID = 'template_0pr013m';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    msgContainer.innerText = "Thank you! Your reservation request has been sent successfully. We will contact you shortly.";
                     msgContainer.className = "success-msg";
                     msgContainer.style.display = "block";
                     form.reset();
-                } else {
-                    throw new Error('Submission failed');
-                }
-            })
-            .catch(error => {
-                msgContainer.innerText = "Oops! Something went wrong. Please try contacting us via phone or WhatsApp.";
-                msgContainer.className = "error-msg";
-                msgContainer.style.display = "block";
-            })
-            .finally(() => {
-                submitBtn.innerText = originalBtnText;
-                submitBtn.disabled = false;
-                
-                setTimeout(() => {
-                    msgContainer.style.display = "none";
-                }, 7000);
-            });
+                    
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }, (err) => {
+                    console.error('EmailJS Error:', err);
+                    msgContainer.innerText = "Oops! Something went wrong. Please try contacting us via phone or WhatsApp.";
+                    msgContainer.className = "error-msg";
+                    msgContainer.style.display = "block";
+                    
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+
+            setTimeout(() => {
+                msgContainer.style.display = "none";
+            }, 7000);
         });
     </script>
     
