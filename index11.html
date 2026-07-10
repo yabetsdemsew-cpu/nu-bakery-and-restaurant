@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NU Bakery and Restaurant | Addis Ababa</title>
+    <meta name="description" content="Premium Bakery and Restaurant in Addis Ababa. Fresh Bakery, Delicious Food, Memorable Moments.">
+    
+    <!-- Fontsource Fonts (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.8/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lato@5.0.8/index.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables --- */
+        :root {
+            --primary-dark: #0B2B1B;
+            --gold: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F8F9FA;
+            --text-dark: #333333;
+            --bg-light: #FAF9F6;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Header & Navigation --- */
+                /* --- Header & Navigation --- */
+                /* --- Header & Navigation --- */
+        header {
+            background-color: var(--primary-dark);
+            color: var(--gold);
+            padding: 0.8rem 2%; /* Reduced padding to give more room */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Logo Container - FORCED TRANSPARENT */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            background: transparent !important;
+            padding: 0;
+            margin: 0;
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: var(--transition);
+            background: transparent !important;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-image {
+            height: 45px; /* Slightly smaller for better fit */
+            width: auto;
+            background: transparent !important; /* Removes white box */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem; /* Reduced gap so button fits */
+            align-items: center;
+            margin-left: auto; /* Pushes navigation to the right */
+            margin-right: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.95rem; /* Slightly smaller text to fit */
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .social-icons a {
+            color: var(--gold);
+            margin-left: 12px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            background-color: var(--gold);
+            color: var(--primary-dark);
+            padding: 0.7rem 1.2rem; /* Slightly smaller button */
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                padding: 1rem 0;
+                text-align: center;
+                margin: 0;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo-image {
+                height: 40px;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                padding: 1rem 0;
+                text-align: center;
+                margin: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo-image {
+                height: 40px;
+            }
+        }
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(11, 43, 27, 0.7), rgba(11, 43, 27, 0.7)), url('https://image.qwenlm.ai/public_source/79e22dc9-f099-4076-af24-2807b1317c3c/13da8d931-580f-4719-ab3d-66bf64c59e07.png') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.3s;
+            animation-fill-mode: both;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 10px auto 0;
+        }
+
+        /* --- Featured Menu Enhanced --- */
+                /* --- Catering Cards Special Styling --- */
+        .catering-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .catering-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(11, 43, 27, 0.15);
+        }
+
+        .catering-card .menu-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+            background: linear-gradient(135deg, #f8f8f8 0%, #ececec 100%);
+        }
+
+        .catering-card .menu-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .catering-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .catering-card .menu-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* Special Badges for Catering */
+        .menu-badge.fresh {
+            background: #27ae60;
+            color: white;
+        }
+
+        .menu-badge.morning {
+            background: #f39c12;
+            color: white;
+        }
+
+        /* Feature Tags */
+        .menu-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(212, 175, 55, 0.3);
+        }
+
+        .menu-features span {
+            font-size: 0.8rem;
+            color: var(--primary-dark);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-features span i {
+            color: var(--gold);
+            font-size: 0.75rem;
+        }
+
+        /* Responsive for Catering Cards */
+        @media (max-width: 768px) {
+            .menu-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .catering-card .menu-image-wrapper {
+                height: 220px;
+            }
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .menu-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(11, 43, 27, 0.15);
+        }
+
+        .menu-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .menu-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .menu-badge.new {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .menu-badge.cold {
+            background: #3498db;
+            color: white;
+        }
+
+        .menu-badge.hot {
+            background: #e67e22;
+            color: white;
+        }
+
+        .menu-info {
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .menu-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .menu-info p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Category Section Styling */
+        #menu > div > h3 {
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 2rem;
+            background: var(--bg-light);
+        }
+
+        #menu > div > h3::before,
+        #menu > div > h3::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold));
+        }
+
+        #menu > div > h3::before {
+            right: 100%;
+        }
+
+        #menu > div > h3::after {
+            left: 100%;
+            background: linear-gradient(to left, transparent, var(--gold));
+        }
+
+        /* --- Reservation Form --- */
+        #book {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        #book .section-title {
+            color: var(--gold);
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        input, select, textarea {
+            padding: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+
+        #form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            display: none;
+            text-align: center;
+            font-weight: bold;
+        }
+        .success-msg { background: rgba(46, 204, 113, 0.2); color: #2ecc71; border: 1px solid #2ecc71; }
+        .error-msg { background: rgba(231, 76, 60, 0.2); color: #e74c3c; border: 1px solid #e74c3c; }
+
+        /* --- Gallery Section Professional --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 350px);
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(11, 43, 27, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: brightness(0.9);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+            filter: brightness(1);
+        }
+
+        .item-1 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+        }
+
+        .item-2 {
+            grid-column: 4 / 6;
+            grid-row: 1 / 2;
+        }
+
+        .item-3 {
+            grid-column: 6 / 7;
+            grid-row: 1 / 2;
+        }
+
+        .item-4 {
+            grid-column: 4 / 6;
+            grid-row: 2 / 3;
+        }
+
+        .item-5 {
+            grid-column: 6 / 7;
+            grid-row: 2 / 3;
+        }
+
+        .item-6 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            display: none;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, 
+                rgba(11, 43, 27, 0.95) 0%, 
+                rgba(11, 43, 27, 0.7) 50%, 
+                transparent 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-content {
+            color: var(--text-light);
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-content {
+            transform: translateY(0);
+        }
+
+        .gallery-content i {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .gallery-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        .gallery-content p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 280px);
+            }
+
+            .item-1 {
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+            }
+
+            .item-2 {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+            }
+
+            .item-3 {
+                grid-column: 4 / 5;
+                grid-row: 1 / 2;
+            }
+
+            .item-4 {
+                grid-column: 3 / 5;
+                grid-row: 2 / 3;
+            }
+
+            .item-5 {
+                grid-column: 3 / 4;
+                grid-row: 3 / 4;
+            }
+
+            .item-6 {
+                grid-column: 4 / 5;
+                grid-row: 3 / 4;
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 300px);
+            }
+
+            .item-1,
+            .item-2,
+            .item-3,
+            .item-4,
+            .item-5,
+            .item-6 {
+                grid-column: 1 / 2;
+                grid-row: auto;
+            }
+
+            .item-6 {
+                display: block;
+            }
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 3px solid var(--gold);
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.4s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 0.3;
+            transform: scale(1);
+        }
+
+        /* --- Contact Section --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info div {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #051a12;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        footer .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        /* --- Floating WhatsApp --- */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                padding: 1rem 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #home h1 { font-size: 2.5rem; }
+            #home p { font-size: 1.2rem; }
+            
+            .form-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+      <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <a href="#home" class="logo-link">
+                <!-- NU Bakery Logo SVG -->
+                <svg class="logo-image" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Main NU Text -->
+                    <text x="10" y="45" font-family="Playfair Display, serif" font-size="42" font-weight="700" fill="#D4AF37" letter-spacing="2">NU</text>
+                    
+                    <!-- Decorative Line -->
+                    <line x1="85" y1="20" x2="85" y2="45" stroke="#D4AF37" stroke-width="2"/>
+                    
+                    <!-- BAKERY text -->
+                    <text x="95" y="22" font-family="Lato, sans-serif" font-size="9" font-weight="600" fill="#F8F9FA" letter-spacing="3">BAKERY</text>
+                    
+                    <!-- AND text -->
+                    <text x="95" y="33" font-family="Lato, sans-serif" font-size="7" font-weight="400" fill="#D4AF37" letter-spacing="2">AND</text>
+                    
+                    <!-- RESTAURANT text -->
+                    <text x="95" y="44" font-family="Lato, sans-serif" font-size="9" font-weight="600" fill="#F8F9FA" letter-spacing="3">RESTAURANT</text>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                    
+                <div class="social-icons">
+                    <a href="https://instagram.com/nu._bakery" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/251982757777" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/NUBakery" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+        
+            </li>
+            <li><a href="#book" class="btn">Book a Table</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Fresh Bakery, Delicious Food,<br>Memorable Moments.</h1>
+        <p>Experience the finest dining and premium pastries in Addis Ababa.</p>
+        <div class="hero-buttons">
+            <a href="#book" class="btn">Book a Table</a>
+            <a href="#menu" class="btn btn-outline">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-color: #fff;">
+        <h2 class="section-title">About Us</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+            <p>Welcome to NU Bakery and Restaurant, a premium family destination located in the heart of Addis Ababa. We pride ourselves on offering a harmonious blend of freshly baked pastries, artisanal coffee, and a diverse culinary menu ranging from authentic Ethiopian dishes to international favorites. Our elegant atmosphere is designed to turn every meal into a memorable moment.</p>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section id="menu">
+        <h2 class="section-title">Featured Menu</h2>
+                <!-- Catering & Buffet Specials -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
+                <i class="fas fa-concierge-bell" style="margin-right: 10px;"></i>Catering & Buffet Specials
+            </h3>
+            <div class="menu-grid">
+                <!-- Item 1: Event Catering Spread -->
+                <div class="menu-card catering-card">
+                    <div class="menu-image-wrapper">
+                        <img src="11.jpg" alt="Event Catering Spread">
+                        <div class="menu-badge">Events</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Event Catering Spread</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Premium buffet setup featuring mini sliders, artisan pizzas, fresh pastries, and crispy fried chicken — perfect for corporate events and celebrations</p>
+                        <div class="menu-features">
+                            <span><i class="fas fa-check-circle"></i> Mini Burgers</span>
+                            <span><i class="fas fa-check-circle"></i> Fresh Pastries</span>
+                            <span><i class="fas fa-check-circle"></i> Gourmet Pizza</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2: Fresh Garden Salad Bar -->
+                <div class="menu-card catering-card">
+                    <div class="menu-image-wrapper">
+                        <img src="22.jpg" alt="Fresh Garden Salad Bar">
+                        <div class="menu-badge fresh">Fresh</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Fresh Garden Salad Bar</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Vibrant selection of farm-fresh vegetables including heirloom tomatoes, crisp cucumbers, mixed greens, and artfully prepared garnishes</p>
+                        <div class="menu-features">
+                            <span><i class="fas fa-check-circle"></i> Organic Greens</span>
+                            <span><i class="fas fa-check-circle"></i> Fresh Vegetables</span>
+                            <span><i class="fas fa-check-circle"></i> House Dressings</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3: Breakfast Buffet -->
+                <div class="menu-card catering-card">
+                    <div class="menu-image-wrapper">
+                        <img src="33.jpg" alt="Breakfast Buffet">
+                        <div class="menu-badge morning">Morning</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Grand Breakfast Buffet</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Complete morning feast with fluffy scrambled eggs, golden pancakes, crispy samosas, fresh juices, and artistic fruit carvings</p>
+                        <div class="menu-features">
+                            <span><i class="fas fa-check-circle"></i> Scrambled Eggs</span>
+                            <span><i class="fas fa-check-circle"></i> Fresh Juices</span>
+                            <span><i class="fas fa-check-circle"></i> Fruit Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Savory & Main Dishes -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
+                <i class="fas fa-utensils" style="margin-right: 10px;"></i>
+            </h3>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="https://image.qwenlm.ai/public_source/79e22dc9-f099-4076-af24-2807b1317c3c/165c402d0-a9e7-44f6-8753-6a0364a56eeb.png" alt="Burger and Fries">
+                        <div class="menu-badge">Popular</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Classic Burger & Fries</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">A classic burger served with crispy French fries in a mini wire basket and ketchup</p>
+                    </div>
+                </div>
+               
+                
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="https://image.qwenlm.ai/public_source/79e22dc9-f099-4076-af24-2807b1317c3c/17f7af123-6fea-4fd0-a4e4-07260338288a.png" alt="Breakfast Platter">
+                        <div class="menu-badge new">New</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Deluxe Breakfast Spread</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Folded omelette with ketchup and herbs, sweet pastry, French toast with syrup</p>
+                    </div>
+                </div>
+                
+            
+        </div>
+        
+        <!-- Desserts & Pastries -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
+                <i class="fas fa-cookie-bite" style="margin-right: 10px;"></i>Desserts & Pastries
+            </h3>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="a.webp" alt="Assorted Cakes">
+                        <div class="menu-badge">Chef's Choice</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Assorted Cake Collection</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Three different square pastry slices: Red Velvet, Tiramisu, and Chocolate layer cake</p>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="b.webp" alt="Caramel Cake">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Caramel Tres Leches</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Layered cake topped with glossy caramel glaze, traditional honey-caramel delight</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Beverages -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="text-align: center; color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">
+                <i class="fas fa-coffee" style="margin-right: 10px;"></i>Premium Beverages
+            </h3>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="1.jfif" alt="Iced Coffee">
+                        <div class="menu-badge cold">Cold</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Iced Latte</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Layered cold coffee beverage with milk and espresso, refreshing and smooth</p>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-image-wrapper">
+                        <img src="2.jfif" alt="Hot Coffee">
+                        <div class="menu-badge hot">Hot</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Café Macchiato</h3>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Classic hot coffee drink served in a small glass, rich and aromatic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    </section>
+
+    <!-- Gallery Preview -->
+    <section id="gallery" style="background: linear-gradient(to bottom, #fff, var(--bg-light));">
+        <h2 class="section-title">Our Atmosphere</h2>
+        <p style="text-align: center; max-width: 700px; margin: -2rem auto 3rem; color: #666; font-size: 1.1rem; font-style: italic;">
+            Step into our elegant space where comfort meets sophistication
+        </p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item item-1">
+                <img src="8.webp" alt="NU Bakery Storefront">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-store"></i>
+                        <h4>Welcome to NU Bakery</h4>
+                        <p>Our Elegant Storefront</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item item-2">
+                <img src="3.webp" alt="Coffee Bar">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-coffee"></i>
+                        <h4>Artisan Coffee Bar</h4>
+                        <p>Freshly Brewed Daily</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item item-3">
+                <img src="4.webp" alt="Dining Area">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Dining Experience</h4>
+                        <p>Comfortable Seating</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item item-4">
+                <img src="5.webp" alt="Interior Design">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>Beautiful Interior</h4>
+                        <p>Artistic Ambiance</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item item-5">
+                <img src="6.webp" alt="Cozy Corner">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-couch"></i>
+                        <h4>Cozy Corners</h4>
+                        <p>Perfect for Relaxation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item item-6">
+                <img src="7.webp" alt="Bakery Interior">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <i class="fas fa-bread-slice"></i>
+                        <h4>Fresh Bakery</h4>
+                        <p>Baked with Love</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://instagram.com/nu_bakery" target="_blank" class="btn" style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                <i class="fab fa-instagram" style="margin-right: 8px;"></i>See More on Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="book">
+        <h2 class="section-title">Book a Table</h2>
+        <div class="booking-container">
+            <form id="reservation-form">
+                <input type="hidden" name="_subject" value="New Table Reservation - NU Bakery!">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+251 982 757777">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6+">6+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time *</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="request">Special Request</label>
+                        <textarea id="request" name="request" rows="3" placeholder="Anniversary, birthday, window seat..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem;">Book Now</button>
+                    </div>
+                </div>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #fff;">
+        <h2 class="section-title">Contact & Location</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <strong>Phone:</strong> <br> +251 982 757777
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <strong>Email:</strong> <br> nubakeryandrestaurant@gmail.com
+                </div>
+                <div>
+                    <i class="fas fa-clock"></i>
+                    <strong>Opening Hours:</strong> <br> 1:00 PM – 2:30 AM
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Location:</strong> <br> Addis Ababa, Ethiopia
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252230.02028974562!2d38.76132804023531!3d8.980679542703813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24e49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1234567890123!5m2!1sen!2set" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="NU Bakery Location Map">
+                </iframe>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-dark);">
+                    <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> 
+                    Can't see the map? 
+                    <a href="https://maps.google.com/?q=Addis+Ababa" target="_blank" style="color: var(--gold); text-decoration: underline;">
+                        View on Google Maps
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo brand-font" style="margin-bottom: 1rem;">NU Bakery & Restaurant</div>
+                <div class="social-icons" style="margin-bottom: 1rem;">
+            <a href="https://www.instagram.com/nu._bakery?igsh=MXVsMGRzamVlZHg0bQ=" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/251982757777" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/NUBakery" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>&copy; 2026 NU Bakery and Restaurant. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/251982757777" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        const form = document.getElementById('reservation-form');
+        const msgContainer = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            fetch("https://formsubmit.co/ajax/yabetsdemsew@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    msgContainer.innerText = "Thank you! Your reservation request has been sent. We will contact you shortly.";
+                    msgContainer.className = "success-msg";
+                    msgContainer.style.display = "block";
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(error => {
+                msgContainer.innerText = "Oops! Something went wrong. Please try contacting us via phone or WhatsApp.";
+                msgContainer.className = "error-msg";
+                msgContainer.style.display = "block";
+            })
+            .finally(() => {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+                
+                setTimeout(() => {
+                    msgContainer.style.display = "none";
+                }, 7000);
+            });
+        });
+    </script>
+    
+</body>
+</html>
